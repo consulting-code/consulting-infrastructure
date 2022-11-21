@@ -1,0 +1,32 @@
+version: "3.8"
+
+networks:
+  consulting:
+    driver: bridge
+    name: consulting
+
+services:
+  api:
+    container_name: api
+    networks:
+      - consulting
+    build: ./api
+    volumes:
+      - ./api/src:/app/src
+    env_file:
+      - ./.env
+    ports:
+      - "5000:5000"
+  client:
+    container_name: client
+    networks:
+      - consulting
+    build: ./client
+    volumes:
+      - ./client/src:/app/src
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - api
