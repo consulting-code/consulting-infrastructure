@@ -1,3 +1,10 @@
 To start repo you need to get submodules: 
 
 git submodule update --init --recursive
+
+TODO:
+ - FCD architecture (https://feature-sliced.design/)
+ - Storybook
+ - Jest
+ - React Testing library
+ - Cypress (cucumber)
