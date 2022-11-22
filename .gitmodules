@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/consulting-code/consulting-client
+[submodule "api"]
+	path = api
+	url = https://github.com/consulting-code/consulting-api
